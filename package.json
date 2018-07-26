@@ -1,0 +1,30 @@
+{
+  "name": "fei-cli",
+  "version": "1.0.0",
+  "description": "a cli to build my own project quickly ",
+  "main": "index.js",
+  "bin": {
+    "fei": "bin/fei.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feikerwu/fei-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "vue"
+  ],
+  "author": "feikerwu@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feikerwu/fei-cli/issues"
+  },
+  "homepage": "https://github.com/feikerwu/fei-cli#readme",
+  "dependencies": {
+    "commander": "^2.16.0",
+    "download-git-repo": "^1.0.2"
+  }
+}
