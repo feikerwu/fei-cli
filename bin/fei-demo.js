@@ -6,6 +6,7 @@ const ora = require('ora')
 
 const nope = () => {}
 
+
 const mkdir = function (dir) {
     const spinner = ora('create template dir')
     spinner.start()
@@ -35,7 +36,7 @@ module.exports = (...args) => {
     download('feikerwu/demo-template', distPath, (err) => {
         spinner.stop()
         rmFiles(distPath, ['.gitignore', 'README.md'])
-        rename(path.resolve(distPath, 'template.vue'), path.resolve(distPath, `${demoName}.vue`))
+        // rename(path.resolve(distPath, 'template.vue'), path.resolve(distPath, `${demoName}.vue`))
         console.log(err ? err : 'create template successfully')
     })
 
