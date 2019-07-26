@@ -5,8 +5,6 @@ import chalk from 'chalk';
 import { installCmd } from '../utils';
 import execa from 'execa';
 
-console.log(__dirname);
-
 const { Select, Input } = require('enquirer');
 const cwd = process.cwd();
 
