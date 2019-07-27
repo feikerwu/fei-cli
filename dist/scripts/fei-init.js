@@ -49,6 +49,7 @@ var fs = __importStar(require("fs-extra"));
 var path_1 = __importDefault(require("path"));
 var ora_1 = __importDefault(require("ora"));
 var chalk_1 = __importDefault(require("chalk"));
+var utils_1 = require("../utils");
 var execa_1 = __importDefault(require("execa"));
 var _a = require('enquirer'), Select = _a.Select, Input = _a.Input;
 var cwd = process.cwd();
@@ -101,7 +102,9 @@ function createProject(realProjectPath) {
                                     return [4 /*yield*/, execa_1["default"]('git', ['init'])];
                                 case 1:
                                     _a.sent();
-                                    // await execa(installCmd);
+                                    return [4 /*yield*/, execa_1["default"](utils_1.installCmd)];
+                                case 2:
+                                    _a.sent();
                                     spinner.succeed();
                                     return [2 /*return*/];
                             }
