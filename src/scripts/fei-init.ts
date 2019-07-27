@@ -50,6 +50,7 @@ async function createProject(realProjectPath) {
       spinner.succeed();
       process.chdir(destDir);
       spinner.start('install packages');
+      await execa('git', ['init']);
       await execa(installCmd);
       spinner.succeed();
     },
