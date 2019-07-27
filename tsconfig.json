@@ -1,7 +1,9 @@
 {
+  "include": ["src/**/*"],
   "compilerOptions": {
     "esModuleInterop": true,
     "module": "commonjs",
-    "rootDir": "src"
+    "rootDir": "src",
+    "outDir": "dist"
   }
 }
