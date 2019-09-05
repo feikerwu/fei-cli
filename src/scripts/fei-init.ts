@@ -4,6 +4,7 @@ import ora from 'ora';
 import chalk from 'chalk';
 import { installCmd } from '../utils';
 import execa from 'execa';
+import jsonHi from 'json-hi';
 
 const { Select, Input } = require('enquirer');
 const cwd = process.cwd();
@@ -49,10 +50,11 @@ async function createProject(realProjectPath) {
     async () => {
       spinner.succeed();
       process.chdir(destDir);
-      spinner.start('install packages');
+      changePkgName(path.resolve(destDir, 'package.json'), project.name);
+      // spinner.start('install packages');
       await execa('git', ['init']);
-      await execa(installCmd);
-      spinner.succeed();
+      // await execa(installCmd);
+      // spinner.succeed();
     },
     () => spinner.fail('failed')
   );
@@ -67,4 +69,15 @@ async function handleDirExist() {
   project.name = anotherDirName;
 
   init();
+}
+
+/**
+ * 动态改package名
+ * @param pkg package.json 路径
+ * @param name 改名
+ */
+function changePkgName(pkg: string, name: string): void {
+  const editor = new jsonHi(pkg);
+  editor.set('name', name);
+  editor.save();
 }

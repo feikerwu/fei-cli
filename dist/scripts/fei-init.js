@@ -49,8 +49,8 @@ var fs = __importStar(require("fs-extra"));
 var path_1 = __importDefault(require("path"));
 var ora_1 = __importDefault(require("ora"));
 var chalk_1 = __importDefault(require("chalk"));
-var utils_1 = require("../utils");
 var execa_1 = __importDefault(require("execa"));
+var json_hi_1 = __importDefault(require("json-hi"));
 var _a = require('enquirer'), Select = _a.Select, Input = _a.Input;
 var cwd = process.cwd();
 var project = {
@@ -98,13 +98,13 @@ function createProject(realProjectPath) {
                                 case 0:
                                     spinner.succeed();
                                     process.chdir(destDir);
-                                    spinner.start('install packages');
+                                    changePkgName(path_1["default"].resolve(destDir, 'package.json'), project.name);
+                                    // spinner.start('install packages');
                                     return [4 /*yield*/, execa_1["default"]('git', ['init'])];
                                 case 1:
+                                    // spinner.start('install packages');
                                     _a.sent();
-                                    return [4 /*yield*/, execa_1["default"](utils_1.installCmd)];
-                                case 2:
-                                    _a.sent();
+                                    // await execa(installCmd);
                                     spinner.succeed();
                                     return [2 /*return*/];
                             }
@@ -133,4 +133,14 @@ function handleDirExist() {
             }
         });
     });
+}
+/**
+ * 动态改package名
+ * @param pkg package.json 路径
+ * @param name 改名
+ */
+function changePkgName(pkg, name) {
+    var editor = new json_hi_1["default"](pkg);
+    editor.set('name', name);
+    editor.save();
 }

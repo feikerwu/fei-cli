@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel example.html"
+    "dev": "parcel example/index.html"
   },
   "devDependencies": {
     "commitlint": "^8.1.0",

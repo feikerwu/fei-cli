@@ -1033,6 +1033,11 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+json-hi@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/json-hi/-/json-hi-1.0.0.tgz#2d497228fa9d05c076ba8c5cccb58d2a59eb14ac"
+  integrity sha512-/k5ONh186bG8xtYHpMoiPUfyV1oGLB7zqf2imggyHHMn+5jBbCP4U/3B5pdGbLVNWd2pSTnqHpEqAjy+XBLxJg==
+
 json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
