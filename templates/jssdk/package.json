@@ -3,6 +3,9 @@
   "version": "1.0.6",
   "description": "",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "parcel example/index.html"
   },
@@ -26,5 +29,5 @@
     "dist/",
     "*.md"
   ],
-  "gitHead": "0b2d68c63a6bddb26435e41f8ea0ab0dbeac9cb6"
+  "gitHead": "89be9ab1fafacf1dbb9f8255aaa643b3675fc87c"
 }
