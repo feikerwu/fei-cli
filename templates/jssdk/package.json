@@ -25,5 +25,6 @@
   "files": [
     "dist/",
     "*.md"
-  ]
+  ],
+  "gitHead": "27deae856bc1475cf02375a154b25507254bf111"
 }
