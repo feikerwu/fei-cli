@@ -1,7 +1,10 @@
 {
-  "packages": [
-    "templates/*",
-    "dist"
-  ],
-  "version": "independent"
+  "packages": ["templates/*", "dist"],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "ignoreChanges": ["ignored-file", "*.md"],
+      "message": "chore(release): publish"
+    }
+  }
 }
