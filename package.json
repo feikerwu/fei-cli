@@ -50,5 +50,6 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  }
+  },
+  "gitHead": "139155ee89c79df854a04e9d1429a7afbd431586"
 }
