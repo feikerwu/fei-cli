@@ -1,5 +1,5 @@
 {
-  "name": "@fei-cli-template/jssdk",
+  "name": "@fei-cli/template-jssdk",
   "version": "1.0.7",
   "description": "",
   "main": "index.js",
@@ -29,5 +29,5 @@
     "dist/",
     "*.md"
   ],
-  "gitHead": "89be9ab1fafacf1dbb9f8255aaa643b3675fc87c"
+  "gitHead": "32e77be6fe9acb09ae816a32fa04dfd3f6c78213"
 }
