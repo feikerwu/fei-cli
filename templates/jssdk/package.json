@@ -1,5 +1,5 @@
 {
-  "name": "jssdk",
+  "name": "@fei-cli-template/jssdk",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

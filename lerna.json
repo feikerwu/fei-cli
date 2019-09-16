@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "templates/*",
+    "dist"
+  ],
+  "version": "independent"
+}
