@@ -1,6 +1,6 @@
 {
   "name": "fei-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a cli to build my own project quickly ",
   "main": "dist/index.js",
   "bin": {
