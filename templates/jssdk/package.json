@@ -7,7 +7,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "parcel example/index.html"
+    "dev": "parcel example/index.html -d example/dist"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.1.0",
