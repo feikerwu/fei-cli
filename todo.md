@@ -1,1 +1,0 @@
-[] jssdk 在生成的时候动态改package.json的包名
