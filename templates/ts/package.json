@@ -1,0 +1,34 @@
+{
+  "name": "@fei-cli/template-ssdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "parcel example/index.html -d example/dist"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^8.1.0",
+    "commitlint": "^8.1.0",
+    "husky": "^3.0.1",
+    "ts-jest": "^24.2.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "files": [
+    "dist/",
+    "*.md"
+  ]
+}
