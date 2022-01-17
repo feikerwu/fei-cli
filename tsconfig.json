@@ -2,8 +2,11 @@
   "include": ["src/**/*"],
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "commonjs",
-    "rootDir": "src",
+    "module": "es2022",
+    "target": "es2017",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    // "rootDir": "src",
     "outDir": "dist"
   }
 }

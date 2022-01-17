@@ -14,7 +14,7 @@ const project: {
   template: string;
 } = {
   name: '',
-  template: ''
+  template: '',
 };
 
 export function init(dir?: string) {
@@ -33,7 +33,7 @@ async function createProject(realProjectPath) {
   if (!project.template) {
     const prompt = new Select({
       message: 'pick a template',
-      choices: fs.readdirSync(path.join(__dirname, '../../templates'))
+      choices: fs.readdirSync(path.join(__dirname, '../../templates')),
     });
 
     project.template = await prompt.run();
@@ -44,17 +44,14 @@ async function createProject(realProjectPath) {
 
   let spinner = ora({
     color: 'yellow',
-    text: 'creating project'
+    text: 'creating project',
   }).start();
   fs.copy(srcDir, destDir).then(
     async () => {
       spinner.succeed();
       process.chdir(destDir);
       changePkgName(path.resolve(destDir, 'package.json'), project.name);
-      // spinner.start('install packages');
       await execa('git', ['init']);
-      // await execa(installCmd);
-      // spinner.succeed();
     },
     () => spinner.fail('failed')
   );
@@ -63,7 +60,7 @@ async function createProject(realProjectPath) {
 async function handleDirExist() {
   console.log(chalk.red('project exist!'));
   const anotherDirName = await new Input({
-    message: 'input another name'
+    message: 'input another name',
   }).run();
 
   project.name = anotherDirName;

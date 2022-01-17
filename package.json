@@ -25,7 +25,8 @@
   "homepage": "https://github.com/feikerwu/fei-cli#readme",
   "dependencies": {
     "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0"
+    "@commitlint/config-conventional": "^8.1.0",
+    "@types/sade": "^1.7.4"
   },
   "devDependencies": {
     "@types/node": "^12.6.8",
