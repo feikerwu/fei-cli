@@ -2,7 +2,7 @@ import * as fs from 'fs-extra';
 import path from 'path';
 import ora from 'ora';
 import chalk from 'chalk';
-import { installCmd } from '../utils';
+
 import execa from 'execa';
 import jsonHi from 'json-hi';
 
