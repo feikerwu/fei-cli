@@ -1,0 +1,9 @@
+{
+	"name": "fei-cli",
+	"bin": {
+		"fei": "./index.js"
+	},
+	"dependencies": {
+		"zx": "^6.1.0"
+	}
+}
